@@ -6,23 +6,23 @@ const projects = [
   {
     icon: <User className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
     title: "개인 프로필 사이트",
-    description: "4개국어 지원 나만의 프로필 페이지를 만들어보세요. AI에게 자기소개를 알려주면 멋진 웹사이트가 완성됩니다.",
+    description: "나만의 프로필 웹페이지를 만듭니다. AI에게 자기소개를 알려주면 한국어·영어·일본어·중국어 4개국어로 된 멋진 사이트가 완성돼요. 만든 사이트는 링크 하나로 누구에게나 공유할 수 있습니다.",
     difficulty: 1,
-    difficultyLabel: "입문",
+    difficultyLabel: "입문 — 처음이라도 OK",
   },
   {
     icon: <FileText className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
     title: "AI 미팅 메모 정리기",
-    description: "미팅 노트를 붙여넣으면 AI가 자동으로 핵심 내용을 정리하고 요약해줍니다. 투자 미팅 정리에 딱!",
+    description: "미팅에서 메모한 내용을 붙여넣기만 하면, AI가 핵심 포인트·액션 아이템·참석자별 할 일을 깔끔하게 정리해줍니다. 매번 회의록 쓰느라 고생하던 시간을 확 줄여보세요.",
     difficulty: 2,
-    difficultyLabel: "초급",
+    difficultyLabel: "초급 — 조금 익숙해진 후",
   },
   {
     icon: <FileSignature className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
     title: "AI 딜 제안서 작성기",
-    description: "회사 정보를 입력하면 AI가 투자 딜 제안서 초안을 작성해주는 도구를 직접 만듭니다.",
+    description: "회사 이름과 간단한 정보만 넣으면 AI가 투자 딜 제안서 초안을 뚝딱 만들어줍니다. 매번 빈 문서 앞에서 막막했다면, 이 도구가 첫 문장부터 도와줘요.",
     difficulty: 3,
-    difficultyLabel: "중급",
+    difficultyLabel: "중급 — 자신감이 붙은 후",
   },
 ];
 
@@ -49,9 +49,11 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight">
             오늘 만드는 것
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-300">
             2시간 안에 실제로 작동하는{" "}
-            <span className="highlight-block">3가지 도구</span>를 만듭니다
+            <span className="highlight-block">3가지 도구</span>를 직접 만들어요.
+            <br />
+            <span className="text-gray-400">하나씩 난이도가 올라가니까, 자연스럽게 실력이 쌓입니다.</span>
           </p>
         </div>
 
@@ -64,9 +66,9 @@ export default function Projects() {
             >
               <div className="mb-4">{project.icon}</div>
               <h3 className="text-xl font-display mb-2 text-white">{project.title}</h3>
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
+              <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-400 font-emphasis">
+                <span className="text-sm text-gray-300 font-emphasis">
                   {project.difficultyLabel}
                 </span>
                 <DifficultyDots level={project.difficulty} />

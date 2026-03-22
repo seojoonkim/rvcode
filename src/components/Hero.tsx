@@ -58,9 +58,9 @@ export default function Hero() {
 
             {/* Enhanced subtitle */}
             <p
-              className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-2 leading-relaxed animate-fade-in delay-200"
+              className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-2 leading-relaxed animate-fade-in delay-200"
             >
-              코딩 몰라도 OK.
+              코딩 경험 제로? 전혀 문제없어요.
             </p>
             <p
               className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in delay-200"
@@ -71,24 +71,24 @@ export default function Hero() {
 
             {/* Social proof stats */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 mb-8 animate-fade-in delay-300">
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
                 <Zap className="w-4 h-4 text-yellow-400" />
-                <span>2시간 세션</span>
+                <span>2시간 완성</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-gray-700" />
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
                 <Users className="w-4 h-4 text-blue-400" />
-                <span>소수 정예</span>
+                <span>소수 정예 (밀착 도움)</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-gray-700" />
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
                 <Wrench className="w-4 h-4 text-neon-lime" />
-                <span>실제 결과물</span>
+                <span>진짜 작동하는 결과물</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-gray-700" />
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
                 <Laptop className="w-4 h-4 text-purple-400" />
-                <span>노트북 1대면 충분</span>
+                <span>맥북 1대면 충분</span>
               </div>
             </div>
 

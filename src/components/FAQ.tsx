@@ -59,7 +59,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
       {isOpen && (
         <div className="px-4 sm:px-5 pb-5">
-          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{a}</p>
+          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{a}</p>
         </div>
       )}
     </div>
@@ -77,7 +77,7 @@ export default function FAQ() {
               자주 묻는 질문
             </h2>
           </div>
-          <p className="text-lg text-gray-400">궁금한 점을 확인해보세요</p>
+          <p className="text-lg text-gray-300">궁금한 점이 있다면 여기서 확인해보세요. 없는 질문은 편하게 물어주세요!</p>
         </div>
 
         <div className="space-y-3 animate-fade-in delay-200">

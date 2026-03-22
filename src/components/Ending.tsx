@@ -25,6 +25,29 @@ export default function Ending() {
           {/* 하단 그라데이션 오버레이 */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
+
+        {/* 사노 텔레그램 문의 안내 */}
+        <div className="text-center mt-16 mb-8">
+          <p className="text-gray-300 text-base md:text-lg mb-3">
+            준비하다가 막히는 게 있거나 궁금한 점이 있으면?
+          </p>
+          <p className="text-white font-bold text-lg md:text-xl mb-6">
+            아래 링크에서{" "}
+            <span className="text-neon-lime">&quot;사노야 xxx 설명해줘&quot;</span>
+            {" "}라고 남겨주세요 🌱
+          </p>
+          <a
+            href="https://t.me/+ZOvzFPzOkBFmOTc1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-neon-lime/40 bg-neon-lime/10 text-neon-lime font-bold text-lg hover:bg-neon-lime/20 hover:border-neon-lime transition-all"
+          >
+            💬 질문하러 가기
+          </a>
+          <p className="text-gray-500 text-sm mt-3">
+            바이브코딩 세션 전용 채널 · 언제든 편하게
+          </p>
+        </div>
       </div>
     </section>
   );

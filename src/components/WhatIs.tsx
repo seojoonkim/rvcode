@@ -48,8 +48,8 @@ export default function WhatIs() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight">
             <span className="highlight-block">바이브코딩</span>이란?
           </h2>
-          <p className="text-lg text-gray-400">
-            코딩을 몰라도 괜찮아요. 말로 설명하면 AI가 대신 만들어줍니다
+          <p className="text-lg text-gray-300">
+            코딩을 몰라도 괜찮아요. 내가 원하는 걸 말로 설명하면, AI가 대신 코드를 짜서 만들어줍니다.
           </p>
         </div>
 
@@ -65,31 +65,31 @@ export default function WhatIs() {
               <XCircle className="w-10 h-10 text-red-400" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-display mb-3 text-red-400">기존 방식</h3>
-            <p className="text-sm text-gray-500 mb-4">개발자 없이 뭔가 만들고 싶을 때</p>
-            <div className="space-y-3 text-gray-400 text-sm">
+            <p className="text-sm text-gray-400 mb-4">개발자 없이 뭔가 만들고 싶을 때, 이렇게 힘들었어요</p>
+            <div className="space-y-3 text-gray-300 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>개발자 채용 공고 → 면접 → 계약 (최소 2~4주)</span>
+                <span>개발자 채용 공고 → 면접 → 계약 (최소 2~4주 소요)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>요구사항 정리, 기획서 작성, 커뮤니케이션 비용</span>
+                <span>요구사항 정리, 기획서 작성, 끝없는 커뮤니케이션</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>개발 기간 3개월 이상 (MVP 기준)</span>
+                <span>최소 기능(MVP)만 만드는 데도 3개월 이상</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>프리랜서 기준 500~2,000만원+</span>
+                <span>프리랜서 비용 500~2,000만원 이상</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>수정 요청할 때마다 추가 비용 발생</span>
+                <span>수정할 때마다 추가 비용과 시간 발생</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
-                <span>내가 직접 만들 수 없어서 답답함</span>
+                <span>내 머릿속 아이디어를 직접 만들 수 없는 답답함</span>
               </div>
             </div>
           </div>
@@ -107,31 +107,31 @@ export default function WhatIs() {
             <h3 className="text-xl font-display mb-3 text-neon-lime">
               바이브코딩
             </h3>
-            <p className="text-sm text-gray-500 mb-4">지금 바로 시작하면</p>
-            <div className="space-y-3 text-gray-400 text-sm">
+            <p className="text-sm text-gray-400 mb-4">바이브코딩으로 시작하면 이렇게 달라져요</p>
+            <div className="space-y-3 text-gray-300 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>&ldquo;이런 기능 만들어줘&rdquo; 한 문장으로 시작</span>
+                <span>&ldquo;이런 기능 만들어줘&rdquo; 한국어 한 문장이면 시작</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>AI가 코드 작성, 나는 결과만 확인</span>
+                <span>AI가 코드를 작성하고, 나는 결과만 확인하면 끝</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>오늘 아이디어 → 오늘 작동하는 버전 완성</span>
+                <span>오늘 떠오른 아이디어 → 오늘 바로 작동하는 버전 완성</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>Cursor AI 무료 플랜으로 충분 (월 0원 가능)</span>
+                <span>Claude Code 무료 체험분으로 충분히 실습 가능</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>마음에 안 들면 즉시 수정 요청, 추가 비용 없음</span>
+                <span>마음에 안 들면 &ldquo;이 부분 고쳐줘&rdquo; 한마디로 즉시 수정</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
-                <span>비전공자도 실제 서비스 런칭 가능</span>
+                <span>비전공자도 실제 서비스를 인터넷에 올릴 수 있음</span>
               </div>
             </div>
           </div>

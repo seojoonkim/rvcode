@@ -146,7 +146,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
       >
         <div>
           <h4 className="font-display text-base text-white">{step.title}</h4>
-          <p className="text-sm text-gray-400">{step.description}</p>
+          <p className="text-sm text-gray-300">{step.description}</p>
         </div>
         <ChevronDown
           className={`w-4 h-4 text-gray-400 transition-transform duration-200 ml-3 flex-shrink-0 ${
@@ -231,11 +231,11 @@ export default function Preparation() {
             <Star className="w-8 h-8 md:w-10 md:h-10 text-neon-lime" strokeWidth={1.5} />
             <span className="highlight-block">사전 준비</span>
           </h2>
-          <p className="text-lg text-gray-400">
-            세션 전에 미리 준비해주세요 (약 20분 소요)
+          <p className="text-lg text-gray-300">
+            세션 전에 미리 준비해주세요 (약 20분이면 끝나요!)
           </p>
-          <p className="text-sm text-gray-600 mt-2">
-            어려운 단어가 나와도 걱정 마세요 — 각 단계마다 쉽게 설명해놨어요!
+          <p className="text-sm text-gray-400 mt-2">
+            처음 보는 단어가 나와도 걱정 마세요 — 각 단계마다 왜 필요한지, 어떻게 하는지 쉽게 설명해놨어요!
           </p>
         </div>
 
@@ -335,8 +335,8 @@ export default function Preparation() {
             <Wrench className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
             <h3 className="text-xl font-display text-white">설치 가이드</h3>
           </div>
-          <p className="text-sm text-gray-400 mb-4">
-            위에서부터 순서대로 진행하세요. 각 항목을 누르면 자세한 설명이 나옵니다.
+          <p className="text-sm text-gray-300 mb-4">
+            위에서부터 순서대로 진행하세요. 각 항목을 탭하면 자세한 설명과 복사 가능한 명령어가 나옵니다.
           </p>
           <div className="space-y-3">
             {installSteps.map((step) => (
@@ -351,8 +351,8 @@ export default function Preparation() {
             <CheckSquare className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
             <h3 className="text-xl font-display text-white">최종 체크리스트</h3>
           </div>
-          <p className="text-sm text-gray-400 mb-3">
-            모두 완료했으면 하나씩 체크해보세요!
+          <p className="text-sm text-gray-300 mb-3">
+            모두 완료했으면 하나씩 체크해보세요! 전부 체크되면 세션 준비 완료입니다 🎉
           </p>
           <div className="border border-[#1a1a1a] rounded-xl bg-[#0a0a0a] p-4">
             <div className="space-y-1">
