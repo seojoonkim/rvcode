@@ -41,12 +41,12 @@ export default function Hero() {
         <div className="animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-lime/30 bg-neon-lime/5 backdrop-blur-sm mb-8 text-sm text-neon-lime/80">
             <span className="w-2 h-2 rounded-full bg-neon-lime animate-pulse" />
-            참가자 모집 중
+            <span className="font-emphasis">참가자 모집 중</span>
           </div>
         </div>
 
         <h1
-          className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight animate-fade-in delay-100"
+          className="text-5xl sm:text-6xl md:text-8xl font-display mb-6 leading-tight tracking-tight animate-fade-in delay-100"
         >
           RV{" "}
           <span className="highlight-block">바이브코딩</span>
@@ -102,7 +102,7 @@ export default function Hero() {
             <span>서울</span>
           </div>
           <div className="w-px h-4 bg-gray-700" />
-          <span className="text-sm font-medium text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
+          <span className="text-sm font-emphasis text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
             신청 마감 임박
           </span>
         </div>

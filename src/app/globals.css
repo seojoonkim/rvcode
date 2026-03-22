@@ -14,15 +14,26 @@
   --color-gray-400: #9ca3af;
   --color-gray-300: #d1d5db;
   --color-white: #ffffff;
-  --font-sans: "Inter", "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-geist-mono), "SF Mono", "Fira Code", monospace;
+}
+
+/* === FONT CLASSES (OBA.run style) === */
+.font-display {
+  font-family: var(--font-black-han-sans), "Black Han Sans", Impact, sans-serif;
+  font-weight: 400;
+}
+
+.font-emphasis {
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
 }
 
 /* === BASE === */
 body {
   background: #000000;
   color: #ffffff;
-  font-family: "Inter", "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {

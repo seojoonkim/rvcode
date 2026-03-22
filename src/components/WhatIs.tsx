@@ -45,7 +45,7 @@ export default function WhatIs() {
     <section id="what-is" className="py-32 md:py-40 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight">
             <span className="highlight-block">바이브코딩</span>이란?
           </h2>
           <p className="text-lg text-gray-400">
@@ -58,13 +58,13 @@ export default function WhatIs() {
           <div
             className="relative p-6 rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] animate-fade-in delay-100"
           >
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-bold tracking-wider">
+            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-emphasis tracking-wider">
               BEFORE
             </div>
             <div className="mb-4">
               <XCircle className="w-10 h-10 text-red-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-red-400">기존 방식</h3>
+            <h3 className="text-xl font-display mb-3 text-red-400">기존 방식</h3>
             <p className="text-sm text-gray-500 mb-4">개발자 없이 뭔가 만들고 싶을 때</p>
             <div className="space-y-3 text-gray-400 text-sm">
               <div className="flex items-start gap-3">
@@ -98,13 +98,13 @@ export default function WhatIs() {
           <div
             className="relative p-6 rounded-xl border border-neon-lime/20 bg-neon-lime/5 animate-fade-in delay-200"
           >
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-neon-lime/10 text-neon-lime text-sm font-bold tracking-wider">
+            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-neon-lime/10 text-neon-lime text-sm font-emphasis tracking-wider">
               AFTER
             </div>
             <div className="mb-4">
               <Rocket className="w-10 h-10 text-neon-lime" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-neon-lime">
+            <h3 className="text-xl font-display mb-3 text-neon-lime">
               바이브코딩
             </h3>
             <p className="text-sm text-gray-500 mb-4">지금 바로 시작하면</p>
@@ -148,7 +148,7 @@ export default function WhatIs() {
         <div className="max-w-4xl mx-auto animate-fade-in delay-300">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
+            <h3 className="text-xl sm:text-2xl font-display text-white">
               더 깊이 이해하기
             </h3>
           </div>
@@ -167,7 +167,7 @@ export default function WhatIs() {
                       <h4 className="font-bold text-sm sm:text-base text-white group-hover:text-neon-lime transition-colors">
                         {resource.title}
                       </h4>
-                      <span className="flex-shrink-0 text-xs font-bold px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
+                      <span className="flex-shrink-0 text-xs font-emphasis px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
                         {resource.tag}
                       </span>
                     </div>

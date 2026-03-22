@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono, Black_Han_Sans, Do_Hyeon } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,18 @@ const inter = Inter({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const blackHanSans = Black_Han_Sans({
+  variable: "--font-black-han-sans",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const doHyeon = Do_Hyeon({
+  variable: "--font-do-hyeon",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${inter.variable} ${geistMono.variable} antialiased`}
+      className={`${inter.variable} ${geistMono.variable} ${blackHanSans.variable} ${doHyeon.variable} antialiased`}
     >
       <head>
         <link

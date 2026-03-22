@@ -61,7 +61,7 @@ export default function Timeline() {
     <section className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight">
             <span className="highlight-block">2시간</span> 타임라인
           </h2>
           <p className="text-lg text-gray-400">
@@ -91,11 +91,11 @@ export default function Timeline() {
                     <span className="text-sm font-mono text-neon-lime font-bold">
                       {step.time}
                     </span>
-                    <span className="text-sm text-gray-400 bg-[#0a0a0a] px-2 py-0.5 rounded-full border border-[#1a1a1a]">
+                    <span className="text-sm font-emphasis text-gray-400 bg-[#0a0a0a] px-2 py-0.5 rounded-full border border-[#1a1a1a]">
                       {step.duration}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold mb-1 text-white">{step.title}</h3>
+                  <h3 className="text-lg font-display mb-1 text-white">{step.title}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed">{step.description}</p>
                 </div>
               </div>

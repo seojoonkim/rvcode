@@ -145,7 +145,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
         className="w-full flex items-center justify-between p-4 sm:p-5 min-h-[56px] hover:bg-gray-800/50 transition-colors text-left"
       >
         <div>
-          <h4 className="font-bold text-base text-white">{step.title}</h4>
+          <h4 className="font-display text-base text-white">{step.title}</h4>
           <p className="text-sm text-gray-400">{step.description}</p>
         </div>
         <ChevronDown
@@ -227,7 +227,7 @@ export default function Preparation() {
     <section id="preparation" className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight flex items-center justify-center gap-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight flex items-center justify-center gap-3">
             <Star className="w-8 h-8 md:w-10 md:h-10 text-neon-lime" strokeWidth={1.5} />
             <span className="highlight-block">사전 준비</span>
           </h2>
@@ -244,7 +244,7 @@ export default function Preparation() {
           <div className="p-6 rounded-xl border border-neon-lime/20 bg-neon-lime/5">
             <div className="flex items-center gap-2 mb-4">
               <Terminal className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold text-neon-lime">터미널이 뭔가요?</h3>
+              <h3 className="text-lg font-display text-neon-lime">터미널이 뭔가요?</h3>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed mb-6">
               맥북에서 명령어를 입력할 수 있는 프로그램입니다. 마우스로 클릭하는 대신, 키보드로 원하는 작업을 직접 지시할 수 있어요.
@@ -314,7 +314,7 @@ export default function Preparation() {
         <div className="mb-12 animate-fade-in delay-200">
           <div className="flex items-center gap-2 mb-4">
             <Package className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl font-bold text-white">준비물</h3>
+            <h3 className="text-xl font-display text-white">준비물</h3>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             {supplies.map((item) => (
@@ -333,7 +333,7 @@ export default function Preparation() {
         <div className="mb-12 animate-fade-in delay-300">
           <div className="flex items-center gap-2 mb-2">
             <Wrench className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl font-bold text-white">설치 가이드</h3>
+            <h3 className="text-xl font-display text-white">설치 가이드</h3>
           </div>
           <p className="text-sm text-gray-400 mb-4">
             위에서부터 순서대로 진행하세요. 각 항목을 누르면 자세한 설명이 나옵니다.
@@ -349,7 +349,7 @@ export default function Preparation() {
         <div className="animate-fade-in delay-400">
           <div className="flex items-center gap-2 mb-4">
             <CheckSquare className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl font-bold text-white">최종 체크리스트</h3>
+            <h3 className="text-xl font-display text-white">최종 체크리스트</h3>
           </div>
           <p className="text-sm text-gray-400 mb-3">
             모두 완료했으면 하나씩 체크해보세요!
