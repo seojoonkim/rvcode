@@ -64,19 +64,32 @@ export default function WhatIs() {
             <div className="mb-4">
               <XCircle className="w-10 h-10 text-red-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-bold mb-4 text-red-400">기존 방식</h3>
-            <div className="space-y-3 text-gray-400">
-              <div className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                <span>개발자 채용</span>
+            <h3 className="text-xl font-bold mb-3 text-red-400">기존 방식</h3>
+            <p className="text-xs text-gray-500 mb-4">개발자 없이 뭔가 만들고 싶을 때</p>
+            <div className="space-y-3 text-gray-400 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>개발자 채용 공고 → 면접 → 계약 (최소 2~4주)</span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                <span>3개월 개발 기간</span>
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>요구사항 정리, 기획서 작성, 커뮤니케이션 비용</span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                <span>500만원+ 비용</span>
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>개발 기간 3개월 이상 (MVP 기준)</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>프리랜서 기준 500~2,000만원+</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>수정 요청할 때마다 추가 비용 발생</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 font-bold mt-0.5">✕</span>
+                <span>내가 직접 만들 수 없어서 답답함</span>
               </div>
             </div>
           </div>
@@ -91,24 +104,44 @@ export default function WhatIs() {
             <div className="mb-4">
               <Rocket className="w-10 h-10 text-neon-lime" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-bold mb-4 text-neon-lime">
+            <h3 className="text-xl font-bold mb-3 text-neon-lime">
               바이브코딩
             </h3>
-            <div className="space-y-3 text-gray-400">
-              <div className="flex items-center gap-3">
-                <span className="text-neon-lime font-bold">✓</span>
-                <span>한국어로 원하는 것을 설명</span>
+            <p className="text-xs text-gray-500 mb-4">지금 바로 시작하면</p>
+            <div className="space-y-3 text-gray-400 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>&ldquo;이런 기능 만들어줘&rdquo; 한 문장으로 시작</span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-neon-lime font-bold">✓</span>
-                <span>30분 만에 완성</span>
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>AI가 코드 작성, 나는 결과만 확인</span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-neon-lime font-bold">✓</span>
-                <span>거의 0원 (무료 도구 활용)</span>
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>오늘 아이디어 → 오늘 작동하는 버전 완성</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>Cursor AI 무료 플랜으로 충분 (월 0원 가능)</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>마음에 안 들면 즉시 수정 요청, 추가 비용 없음</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-neon-lime font-bold mt-0.5">✓</span>
+                <span>비전공자도 실제 서비스 런칭 가능</span>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Impact Statement */}
+        <div className="text-center mb-20 animate-fade-in delay-250">
+          <p className="text-lg sm:text-xl font-medium text-white/90 italic">
+            &ldquo;오늘 이 자리에서 아이디어를 실제로 만들어봅니다.&rdquo;
+          </p>
         </div>
 
         {/* Related Resources — 철학/방법론 */}
