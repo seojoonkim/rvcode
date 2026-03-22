@@ -8,8 +8,12 @@ export default function Ending() {
         <h2 className="font-display text-4xl md:text-6xl text-white mb-4">
           오늘, 당신의 첫 번째 <span className="highlight-block">AI 도구</span>를 만듭니다
         </h2>
-        <p className="text-gray-400 text-lg mb-12">
+        <p className="text-gray-300 text-lg md:text-xl mb-4">
           2시간 후, 이 자리에서 직접 만든 것을 화면에 띄웁니다.
+        </p>
+        <p className="text-gray-400 text-base mb-12">
+          &ldquo;나는 코딩 못 해&rdquo;라고 생각했던 오늘의 나에게,<br />
+          &ldquo;나도 만들 수 있었어&rdquo;라는 경험을 선물하세요.
         </p>
 
         {/* 이미지 — 전체 너비, 약간의 라운드 */}
