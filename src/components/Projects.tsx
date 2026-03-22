@@ -1,0 +1,88 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const projects = [
+  {
+    icon: "⭐",
+    title: "개인 프로필 사이트",
+    description: "4개국어 지원 나만의 프로필 페이지를 만들어보세요",
+    difficulty: 1,
+    difficultyLabel: "입문",
+  },
+  {
+    icon: "📝",
+    title: "AI 미팅 메모 정리기",
+    description: "미팅 노트를 AI가 자동으로 정리하고 요약합니다",
+    difficulty: 2,
+    difficultyLabel: "초급",
+  },
+  {
+    icon: "🤑",
+    title: "AI 딜 제안서 작성기",
+    description: "투자 딜 제안서를 AI가 작성해주는 도구를 만듭니다",
+    difficulty: 3,
+    difficultyLabel: "중급",
+  },
+];
+
+function DifficultyDots({ level }: { level: number }) {
+  return (
+    <div className="flex items-center gap-1.5">
+      {[1, 2, 3].map((i) => (
+        <div
+          key={i}
+          className={`w-2 h-2 rounded-full ${
+            i <= level ? "bg-accent" : "bg-card-border"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default function Projects() {
+  return (
+    <section className="py-24 px-4 bg-card/30">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            오늘 만드는 것
+          </h2>
+          <p className="text-lg text-muted">
+            2시간 안에 실제로 작동하는 3가지 도구를 만듭니다
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group p-6 rounded-2xl border border-card-border bg-card hover:border-primary/30 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">{project.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <p className="text-muted text-sm mb-4">{project.description}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted">
+                  {project.difficultyLabel}
+                </span>
+                <DifficultyDots level={project.difficulty} />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
