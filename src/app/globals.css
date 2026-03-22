@@ -4,16 +4,17 @@
   --color-background: #000000;
   --color-foreground: #ffffff;
   --color-neon-lime: #CCFF00;
+  --color-neon-pink: #FF2D78;
   --color-neon-blue: #3b82f6;
   --color-neon-green: #00FF87;
+  --color-gray-900: #0a0a0a;
   --color-gray-800: #1a1a1a;
   --color-gray-700: #2a2a2a;
   --color-gray-600: #4b5563;
   --color-gray-400: #9ca3af;
   --color-gray-300: #d1d5db;
-  --color-gray-900: #0a0a0a;
   --color-white: #ffffff;
-  --font-sans: "Pretendard Variable", "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Inter", "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-geist-mono), "SF Mono", "Fira Code", monospace;
 }
 
@@ -21,7 +22,7 @@
 body {
   background: #000000;
   color: #ffffff;
-  font-family: "Pretendard Variable", "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -75,21 +76,89 @@ body::before {
   color: #000000;
 }
 
-/* === iOS Safari flicker fix === */
-* {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.highlight-block-pink {
+  display: inline;
+  vertical-align: baseline;
+  position: static;
+  padding: 0.04em 0.22em 0.02em;
+  min-height: 0;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-radius: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: #FF2D78;
+  color: #ffffff;
 }
 
-section {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: auto;
+/* === CSS-only fade-in animation (replaces Framer Motion whileInView) === */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-img, video, canvas {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+.animate-fade-in {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* === Focus visible for accessibility === */
+:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === Skip to content (accessibility) === */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  padding: 8px 16px;
+  background: #CCFF00;
+  color: #000;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* === Reduced motion preference === */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+  .animate-bounce {
+    animation: none;
+  }
+  .animate-pulse {
+    animation: none;
+  }
 }
 
 /* === Custom scrollbar === */

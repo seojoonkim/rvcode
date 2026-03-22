@@ -42,6 +42,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background text-foreground">
+        <a href="#preparation" className="skip-link">
+          사전 준비로 건너뛰기
+        </a>
         {children}
       </body>
     </html>

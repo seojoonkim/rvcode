@@ -1,14 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  Star,
+  Terminal,
+  Package,
+  Wrench,
+  CheckSquare,
+  Laptop,
+  Plug,
+  Camera,
+  FileText,
+  File,
+  Lightbulb,
+  Copy,
+  Check,
+  ChevronDown,
+  Search,
+  FolderOpen,
+  Rocket as RocketIcon,
+  Keyboard,
+} from "lucide-react";
 
 const supplies = [
-  { icon: "💻", text: "맥북 (macOS)" },
-  { icon: "🔌", text: "충전기" },
-  { icon: "📸", text: "프로필 사진 1장" },
-  { icon: "📝", text: "간단한 자기소개 (한/영)" },
-  { icon: "📄", text: "이력서 또는 LinkedIn 프로필" },
+  { icon: <Laptop className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />, text: "맥북 (macOS)" },
+  { icon: <Plug className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />, text: "충전기" },
+  { icon: <Camera className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />, text: "프로필 사진 1장" },
+  { icon: <FileText className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />, text: "간단한 자기소개 (한/영)" },
+  { icon: <File className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />, text: "이력서 또는 LinkedIn 프로필" },
 ];
 
 interface InstallStep {
@@ -51,7 +70,7 @@ const installSteps: InstallStep[] = [
   },
   {
     id: "claude",
-    title: "4. Claude Code 설치 (핵심 도구! ⭐)",
+    title: "4. Claude Code 설치 (핵심 도구!)",
     description: "AI가 코드를 대신 작성해주는 핵심 도구",
     detailDescription: "Claude Code는 오늘 세션의 핵심 도구입니다! 한국어로 \"이런 웹사이트 만들어줘\"라고 말하면 AI가 코드를 자동으로 작성해줍니다. 설치 후 claude 명령어를 입력하면 처음 사용자를 위한 안내(온보딩)가 시작됩니다.",
     installCmd: "npm install -g @anthropic-ai/claude-code\nclaude",
@@ -101,9 +120,17 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-2 right-2 px-3 py-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md bg-gray-700/50 hover:bg-gray-700 text-xs text-gray-400 hover:text-white transition-colors"
+      className="absolute top-2 right-2 px-3 py-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md bg-gray-700/50 hover:bg-gray-700 text-xs text-gray-400 hover:text-white transition-colors gap-1"
     >
-      {copied ? "✓ 복사됨" : "복사"}
+      {copied ? (
+        <>
+          <Check className="w-3 h-3" /> 복사됨
+        </>
+      ) : (
+        <>
+          <Copy className="w-3 h-3" /> 복사
+        </>
+      )}
     </button>
   );
 }
@@ -112,7 +139,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-800/20">
+    <div className="border border-[#1a1a1a] rounded-xl overflow-hidden bg-[#0a0a0a]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-4 sm:p-5 min-h-[56px] hover:bg-gray-800/50 transition-colors text-left"
@@ -121,62 +148,54 @@ function AccordionItem({ step }: { step: InstallStep }) {
           <h4 className="font-bold text-base text-white">{step.title}</h4>
           <p className="text-sm text-gray-400">{step.description}</p>
         </div>
-        <span
-          className={`text-gray-400 transition-transform duration-200 ml-3 flex-shrink-0 ${
+        <ChevronDown
+          className={`w-4 h-4 text-gray-400 transition-transform duration-200 ml-3 flex-shrink-0 ${
             isOpen ? "rotate-180" : ""
           }`}
-        >
-          ▼
-        </span>
+          strokeWidth={1.5}
+        />
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="px-4 sm:px-5 pb-5 space-y-4">
-              {/* Detailed description for beginners */}
-              <p className="text-sm text-gray-300 leading-relaxed bg-gray-800/50 p-3 rounded-lg border border-gray-700/50">
-                💡 {step.detailDescription}
-              </p>
+      {isOpen && (
+        <div className="px-4 sm:px-5 pb-5 space-y-4">
+          {/* Detailed description */}
+          <p className="text-sm text-gray-300 leading-relaxed bg-gray-800/50 p-3 rounded-lg border border-gray-700/50 flex items-start gap-2">
+            <Lightbulb className="w-4 h-4 text-neon-lime flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+            <span>{step.detailDescription}</span>
+          </p>
 
-              {/* Install command */}
-              <div>
-                <p className="text-xs text-gray-400 mb-2">
-                  📦 설치 명령어 — 터미널(맥북의 명령어 입력 프로그램)을 열고 아래를 복사해서 붙여넣으세요
-                </p>
-                <div className="relative">
-                  <pre className="bg-black border border-gray-700 rounded-lg p-3 sm:p-4 pr-16 text-sm font-mono text-neon-lime overflow-x-auto">
-                    {step.installCmd}
-                  </pre>
-                  <CopyButton text={step.installCmd} />
-                </div>
-              </div>
-
-              {/* Verify command */}
-              <div>
-                <p className="text-xs text-gray-400 mb-2">
-                  ✅ 확인 명령어 — 설치가 잘 됐는지 확인하려면 아래를 입력하세요
-                </p>
-                <div className="relative">
-                  <pre className="bg-black border border-gray-700 rounded-lg p-3 sm:p-4 pr-16 text-sm font-mono text-neon-blue overflow-x-auto">
-                    {step.verifyCmd}
-                  </pre>
-                  <CopyButton text={step.verifyCmd} />
-                </div>
-                <p className="text-xs text-gray-400 mt-1.5">
-                  👉 예상 결과: <code className="text-neon-lime">{step.verifyExpect}</code>
-                </p>
-              </div>
+          {/* Install command */}
+          <div>
+            <p className="text-xs text-gray-400 mb-2 flex items-center gap-1.5">
+              <Package className="w-3.5 h-3.5" strokeWidth={1.5} />
+              설치 명령어 — 터미널을 열고 아래를 복사해서 붙여넣으세요
+            </p>
+            <div className="relative">
+              <pre className="bg-black border border-[#1a1a1a] rounded-lg p-3 sm:p-4 pr-16 text-sm font-mono text-neon-lime overflow-x-auto">
+                {step.installCmd}
+              </pre>
+              <CopyButton text={step.installCmd} />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+
+          {/* Verify command */}
+          <div>
+            <p className="text-xs text-gray-400 mb-2 flex items-center gap-1.5">
+              <Check className="w-3.5 h-3.5 text-neon-green" strokeWidth={1.5} />
+              확인 명령어 — 설치가 잘 됐는지 확인하려면 아래를 입력하세요
+            </p>
+            <div className="relative">
+              <pre className="bg-black border border-[#1a1a1a] rounded-lg p-3 sm:p-4 pr-16 text-sm font-mono text-neon-blue overflow-x-auto">
+                {step.verifyCmd}
+              </pre>
+              <CopyButton text={step.verifyCmd} />
+            </div>
+            <p className="text-xs text-gray-400 mt-1.5">
+              예상 결과: <code className="text-neon-lime">{step.verifyExpect}</code>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -207,15 +226,10 @@ export default function Preparation() {
   return (
     <section id="preparation" className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px", amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
-            ⭐ <span className="highlight-block">사전 준비</span>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight flex items-center justify-center gap-3">
+            <Star className="w-8 h-8 md:w-10 md:h-10 text-neon-lime" strokeWidth={1.5} />
+            <span className="highlight-block">사전 준비</span>
           </h2>
           <p className="text-lg text-gray-400">
             세션 전에 미리 준비해주세요 (약 20분 소요)
@@ -223,55 +237,104 @@ export default function Preparation() {
           <p className="text-sm text-gray-600 mt-2">
             어려운 단어가 나와도 걱정 마세요 — 각 단계마다 쉽게 설명해놨어요!
           </p>
-        </motion.div>
+        </div>
 
-        {/* Terminal explanation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px", amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 p-5 rounded-xl border border-neon-blue/20 bg-neon-blue/5"
-        >
-          <h3 className="text-base font-bold mb-2 text-neon-blue">💻 터미널 여는 법</h3>
-          <p className="text-sm text-gray-300 leading-relaxed">
-            아래 설치를 하려면 먼저 <strong className="text-white">터미널</strong>을 열어야 합니다.
-            터미널은 맥북에서 명령어를 입력하는 프로그램이에요.{" "}
-            <strong className="text-white">Spotlight 검색(⌘ + Space)</strong>에서 &quot;터미널&quot; 또는 &quot;Terminal&quot;을 검색하면 바로 찾을 수 있습니다.
-          </p>
-        </motion.div>
+        {/* Terminal Guide — 터미널이 뭔가요? */}
+        <div className="mb-12 animate-fade-in delay-100">
+          <div className="p-6 rounded-xl border border-neon-lime/20 bg-neon-lime/5">
+            <div className="flex items-center gap-2 mb-4">
+              <Terminal className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold text-neon-lime">터미널이 뭔가요?</h3>
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed mb-6">
+              맥북에서 명령어를 입력할 수 있는 프로그램입니다. 마우스로 클릭하는 대신, 키보드로 원하는 작업을 직접 지시할 수 있어요.
+            </p>
+
+            <h4 className="text-sm font-bold text-white mb-3">터미널 실행하는 방법 (3가지)</h4>
+
+            <div className="space-y-4 mb-6">
+              <div className="p-4 rounded-lg bg-black/50 border border-[#1a1a1a]">
+                <div className="flex items-center gap-2 mb-2">
+                  <Search className="w-4 h-4 text-neon-lime" strokeWidth={1.5} />
+                  <p className="text-sm font-bold text-neon-lime">방법 1 (가장 빠름)</p>
+                </div>
+                <ol className="text-sm text-gray-300 space-y-1 ml-6 list-decimal">
+                  <li>키보드 왼쪽 아래 <code className="text-neon-lime bg-gray-800 px-1.5 py-0.5 rounded text-xs">Command(⌘)</code> 키와 <code className="text-neon-lime bg-gray-800 px-1.5 py-0.5 rounded text-xs">Space</code> 키를 동시에 누르기</li>
+                  <li>검색창에 &quot;터미널&quot; 입력</li>
+                  <li>Enter 키 누르기</li>
+                </ol>
+              </div>
+
+              <div className="p-4 rounded-lg bg-black/50 border border-[#1a1a1a]">
+                <div className="flex items-center gap-2 mb-2">
+                  <FolderOpen className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <p className="text-sm font-bold text-white">방법 2 (파인더로)</p>
+                </div>
+                <ol className="text-sm text-gray-300 space-y-1 ml-6 list-decimal">
+                  <li>독(Dock, 화면 아래 아이콘 바)에서 파인더(웃는 얼굴 아이콘) 클릭</li>
+                  <li>왼쪽 사이드바에서 &quot;응용 프로그램&quot; 클릭</li>
+                  <li>&quot;유틸리티&quot; 폴더 찾기 → &quot;Terminal&quot; 더블클릭</li>
+                </ol>
+              </div>
+
+              <div className="p-4 rounded-lg bg-black/50 border border-[#1a1a1a]">
+                <div className="flex items-center gap-2 mb-2">
+                  <RocketIcon className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  <p className="text-sm font-bold text-white">방법 3 (Launchpad로)</p>
+                </div>
+                <ol className="text-sm text-gray-300 space-y-1 ml-6 list-decimal">
+                  <li>독에서 Launchpad(로켓 아이콘) 클릭</li>
+                  <li>&quot;터미널&quot; 검색 → 클릭</li>
+                </ol>
+              </div>
+            </div>
+
+            <h4 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
+              <Keyboard className="w-4 h-4 text-neon-lime" strokeWidth={1.5} />
+              터미널 사용 팁
+            </h4>
+            <div className="grid sm:grid-cols-2 gap-2">
+              <div className="text-sm text-gray-300 flex items-center gap-2 p-2 rounded bg-black/30">
+                <span className="text-neon-lime font-mono text-xs">⌘+V</span> 명령어 붙여넣기
+              </div>
+              <div className="text-sm text-gray-300 flex items-center gap-2 p-2 rounded bg-black/30">
+                <span className="text-neon-lime font-mono text-xs">Enter</span> 실행하기
+              </div>
+              <div className="text-sm text-gray-300 flex items-center gap-2 p-2 rounded bg-black/30">
+                <span className="text-neon-lime font-mono text-xs">Ctrl+C</span> 중단하기
+              </div>
+              <div className="text-sm text-gray-300 flex items-center gap-2 p-2 rounded bg-black/30">
+                <span className="text-neon-lime font-mono text-xs">clear</span> 화면 깨끗이
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Supplies */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px", amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
-          <h3 className="text-xl font-bold mb-4 text-white">📦 준비물</h3>
+        <div className="mb-12 animate-fade-in delay-200">
+          <div className="flex items-center gap-2 mb-4">
+            <Package className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
+            <h3 className="text-xl font-bold text-white">준비물</h3>
+          </div>
           <div className="grid sm:grid-cols-2 gap-3">
             {supplies.map((item) => (
               <div
                 key={item.text}
-                className="flex items-center gap-3 p-4 min-h-[48px] rounded-xl border border-gray-700 bg-gray-800/30"
+                className="flex items-center gap-3 p-4 min-h-[48px] rounded-xl border border-[#1a1a1a] bg-[#0a0a0a]"
               >
-                <span className="text-xl">{item.icon}</span>
+                {item.icon}
                 <span className="text-sm sm:text-base text-gray-300">{item.text}</span>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Install Guide */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px", amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-12"
-        >
-          <h3 className="text-xl font-bold mb-2 text-white">🛠 설치 가이드</h3>
+        <div className="mb-12 animate-fade-in delay-300">
+          <div className="flex items-center gap-2 mb-2">
+            <Wrench className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
+            <h3 className="text-xl font-bold text-white">설치 가이드</h3>
+          </div>
           <p className="text-sm text-gray-400 mb-4">
             위에서부터 순서대로 진행하세요. 각 항목을 누르면 자세한 설명이 나옵니다.
           </p>
@@ -280,27 +343,25 @@ export default function Preparation() {
               <AccordionItem key={step.id} step={step} />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Checklist */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px", amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h3 className="text-xl font-bold mb-4 text-white">✅ 최종 체크리스트</h3>
+        <div className="animate-fade-in delay-400">
+          <div className="flex items-center gap-2 mb-4">
+            <CheckSquare className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
+            <h3 className="text-xl font-bold text-white">최종 체크리스트</h3>
+          </div>
           <p className="text-sm text-gray-400 mb-3">
             모두 완료했으면 하나씩 체크해보세요!
           </p>
-          <div className="border border-gray-700 rounded-xl bg-gray-800/30 p-4">
+          <div className="border border-[#1a1a1a] rounded-xl bg-[#0a0a0a] p-4">
             <div className="space-y-1">
               {checklist.map((item) => (
                 <ChecklistItem key={item} label={item} />
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

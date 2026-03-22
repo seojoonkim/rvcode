@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Calendar } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -13,51 +13,36 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 bg-gray-800/50 backdrop-blur-sm mb-8 text-sm text-gray-400">
             <span className="w-2 h-2 rounded-full bg-neon-lime animate-pulse" />
             참가자 모집 중
           </div>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        <h1
+          className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight animate-fade-in delay-100"
         >
           RV{" "}
           <span className="highlight-block">바이브코딩</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4 leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <p
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4 leading-relaxed animate-fade-in delay-200"
         >
           텍스트 → 마법:{" "}
           <span className="text-white font-medium">AI로 나만의 도구 만들기</span>
-        </motion.p>
+        </p>
 
-        <motion.p
-          className="text-base text-gray-600 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+        <p
+          className="text-base text-gray-600 mb-12 flex items-center justify-center gap-2 animate-fade-in delay-300"
         >
-          📅 일시: TBD (추후 확정)
-        </motion.p>
+          <Calendar className="w-4 h-4 text-gray-600" />
+          일시: TBD (추후 확정)
+        </p>
 
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-400"
         >
           <a
             href="#preparation"
@@ -71,19 +56,15 @@ export default function Hero() {
           >
             더 알아보기
           </a>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-gray-700 flex justify-center pt-2">
           <div className="w-1 h-2 rounded-full bg-gray-600" />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
