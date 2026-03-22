@@ -73,7 +73,7 @@ export default function Timeline() {
 
         <div className="relative animate-fade-in delay-200">
           {/* Vertical line */}
-          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon-lime via-neon-blue to-transparent" />
+          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon-blue via-neon-lime to-neon-red" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -90,10 +90,14 @@ export default function Timeline() {
                 {/* Content */}
                 <div className="flex-1 pb-8">
                   <div className="flex items-center gap-3 mb-1">
-                    <span className="text-sm font-mono text-neon-lime font-bold">
+                    <span className={`text-sm font-mono font-bold ${
+                      i < 2 ? "text-neon-blue" : i < 5 ? "text-neon-lime" : "text-neon-red"
+                    }`}>
                       {step.time}
                     </span>
-                    <span className="text-sm font-emphasis text-gray-400 bg-[#0a0a0a] px-2 py-0.5 rounded-full border border-[#1a1a1a]">
+                    <span className={`text-sm font-emphasis bg-[#0a0a0a] px-2 py-0.5 rounded-full border ${
+                      i < 2 ? "text-neon-blue/70 border-neon-blue/20" : i < 5 ? "text-gray-400 border-[#1a1a1a]" : "text-neon-red/70 border-neon-red/20"
+                    }`}>
                       {step.duration}
                     </span>
                   </div>

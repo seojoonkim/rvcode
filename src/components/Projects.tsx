@@ -2,6 +2,9 @@
 
 import { User, FileText, FileSignature } from "lucide-react";
 
+const iconColors = ["text-neon-lime", "text-neon-blue", "text-neon-red"];
+const dotColors = ["bg-neon-lime", "bg-neon-blue", "bg-neon-red"];
+
 const projects = [
   {
     icon: <User className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
@@ -11,14 +14,14 @@ const projects = [
     difficultyLabel: "입문 — 처음이라도 OK",
   },
   {
-    icon: <FileText className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
+    icon: <FileText className="w-8 h-8 text-neon-blue" strokeWidth={1.5} />,
     title: "AI 미팅 메모 정리기",
     description: "미팅에서 메모한 내용을 붙여넣기만 하면, AI가 핵심 포인트·액션 아이템·참석자별 할 일을 깔끔하게 정리해줍니다. 매번 회의록 쓰느라 고생하던 시간을 확 줄여보세요.",
     difficulty: 2,
     difficultyLabel: "초급 — 조금 익숙해진 후",
   },
   {
-    icon: <FileSignature className="w-8 h-8 text-neon-lime" strokeWidth={1.5} />,
+    icon: <FileSignature className="w-8 h-8 text-neon-red" strokeWidth={1.5} />,
     title: "AI 딜 제안서 작성기",
     description: "회사 이름과 간단한 정보만 넣으면 AI가 투자 딜 제안서 초안을 뚝딱 만들어줍니다. 매번 빈 문서 앞에서 막막했다면, 이 도구가 첫 문장부터 도와줘요.",
     difficulty: 3,
@@ -33,7 +36,7 @@ function DifficultyDots({ level }: { level: number }) {
         <div
           key={i}
           className={`w-2 h-2 rounded-full ${
-            i <= level ? "bg-neon-lime" : "bg-gray-700"
+            i <= level ? dotColors[level - 1] : "bg-gray-700"
           }`}
         />
       ))}
@@ -58,10 +61,16 @@ export default function Projects() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {projects.map((project, i) => (
+          {projects.map((project, i) => {
+            const hoverBorders = [
+              "hover:border-neon-lime/40",
+              "hover:border-neon-blue/40",
+              "hover:border-neon-red/40",
+            ];
+            return (
             <div
               key={project.title}
-              className={`group p-6 rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] hover:border-neon-lime/40 hover:bg-[#0a0a0a]/80 transition-all duration-300 animate-fade-in`}
+              className={`group p-6 rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] ${hoverBorders[i]} hover:bg-[#0a0a0a]/80 transition-all duration-300 animate-fade-in`}
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="mb-4">{project.icon}</div>
@@ -74,7 +83,8 @@ export default function Projects() {
                 <DifficultyDots level={project.difficulty} />
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
