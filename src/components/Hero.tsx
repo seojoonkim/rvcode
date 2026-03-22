@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Calendar, MapPin, Zap, Users, Wrench, Laptop } from "lucide-react";
 
 export default function Hero() {
@@ -37,92 +38,117 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <div className="animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-lime/30 bg-neon-lime/5 backdrop-blur-sm mb-8 text-sm text-neon-lime/80">
-            <span className="w-2 h-2 rounded-full bg-neon-lime animate-pulse" />
-            <span className="font-emphasis">참가자 모집 중</span>
-          </div>
-        </div>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          {/* Left column - Text content */}
+          <div className="flex-1 text-center lg:text-left">
+            <div className="animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-lime/30 bg-neon-lime/5 backdrop-blur-sm mb-8 text-sm text-neon-lime/80">
+                <span className="w-2 h-2 rounded-full bg-neon-lime animate-pulse" />
+                <span className="font-emphasis">참가자 모집 중</span>
+              </div>
+            </div>
 
-        <h1
-          className="text-5xl sm:text-6xl md:text-8xl font-display mb-6 leading-tight tracking-tight animate-fade-in delay-100"
-        >
-          RV{" "}
-          <span className="highlight-block">바이브코딩</span>
-        </h1>
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display mb-6 leading-tight tracking-tight animate-fade-in delay-100"
+            >
+              RV{" "}
+              <span className="highlight-block">바이브코딩</span>
+            </h1>
 
-        {/* Enhanced subtitle */}
-        <p
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-2 leading-relaxed animate-fade-in delay-200"
-        >
-          코딩 몰라도 OK.
-        </p>
-        <p
-          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in delay-200"
-        >
-          오늘 <span className="text-white font-semibold">2시간 안에</span> 나만의 AI 도구를{" "}
-          <span className="text-neon-lime font-semibold">직접 만들어봅니다</span>.
-        </p>
+            {/* Enhanced subtitle */}
+            <p
+              className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-2 leading-relaxed animate-fade-in delay-200"
+            >
+              코딩 몰라도 OK.
+            </p>
+            <p
+              className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in delay-200"
+            >
+              오늘 <span className="text-white font-semibold">2시간 안에</span> 나만의 AI 도구를{" "}
+              <span className="text-neon-lime font-semibold">직접 만들어봅니다</span>.
+            </p>
 
-        {/* Social proof stats */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8 animate-fade-in delay-300">
-          <div className="flex items-center gap-1.5 text-sm text-gray-400">
-            <Zap className="w-4 h-4 text-yellow-400" />
-            <span>2시간 세션</span>
-          </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-700" />
-          <div className="flex items-center gap-1.5 text-sm text-gray-400">
-            <Users className="w-4 h-4 text-blue-400" />
-            <span>소수 정예</span>
-          </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-700" />
-          <div className="flex items-center gap-1.5 text-sm text-gray-400">
-            <Wrench className="w-4 h-4 text-neon-lime" />
-            <span>실제 결과물</span>
-          </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-700" />
-          <div className="flex items-center gap-1.5 text-sm text-gray-400">
-            <Laptop className="w-4 h-4 text-purple-400" />
-            <span>노트북 1대면 충분</span>
-          </div>
-        </div>
+            {/* Social proof stats */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 mb-8 animate-fade-in delay-300">
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+                <Zap className="w-4 h-4 text-yellow-400" />
+                <span>2시간 세션</span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-700" />
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+                <Users className="w-4 h-4 text-blue-400" />
+                <span>소수 정예</span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-700" />
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+                <Wrench className="w-4 h-4 text-neon-lime" />
+                <span>실제 결과물</span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-700" />
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
+                <Laptop className="w-4 h-4 text-purple-400" />
+                <span>노트북 1대면 충분</span>
+              </div>
+            </div>
 
-        {/* Date & location */}
-        <div
-          className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-gray-700/50 bg-gray-800/30 backdrop-blur-sm mb-10 animate-fade-in delay-300"
-        >
-          <div className="flex items-center gap-1.5 text-sm text-gray-300">
-            <Calendar className="w-4 h-4 text-gray-400" />
-            <span>2026년 봄</span>
-          </div>
-          <div className="w-px h-4 bg-gray-700" />
-          <div className="flex items-center gap-1.5 text-sm text-gray-300">
-            <MapPin className="w-4 h-4 text-gray-400" />
-            <span>서울</span>
-          </div>
-          <div className="w-px h-4 bg-gray-700" />
-          <span className="text-sm font-emphasis text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
-            신청 마감 임박
-          </span>
-        </div>
+            {/* Date & location */}
+            <div
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-gray-700/50 bg-gray-800/30 backdrop-blur-sm mb-10 animate-fade-in delay-300"
+            >
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
+                <Calendar className="w-4 h-4 text-gray-400" />
+                <span>2026년 봄</span>
+              </div>
+              <div className="w-px h-4 bg-gray-700" />
+              <div className="flex items-center gap-1.5 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-gray-400" />
+                <span>서울</span>
+              </div>
+              <div className="w-px h-4 bg-gray-700" />
+              <span className="text-sm font-emphasis text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
+                신청 마감 임박
+              </span>
+            </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-400"
-        >
-          <a
-            href="#preparation"
-            className="group px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-neon-lime/20"
-          >
-            지금 바로 신청하기
-            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-          </a>
-          <a
-            href="#what-is"
-            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 hover:border-gray-600 transition-all"
-          >
-            바이브코딩이란?
-          </a>
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-400"
+            >
+              <a
+                href="#preparation"
+                className="group px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-neon-lime/20"
+              >
+                지금 바로 신청하기
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+              <a
+                href="#what-is"
+                className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 hover:border-gray-600 transition-all"
+              >
+                바이브코딩이란?
+              </a>
+            </div>
+          </div>
+
+          {/* Right column - Anime image */}
+          <div className="flex-1 w-full max-w-lg lg:max-w-none animate-fade-in delay-300">
+            <div className="relative">
+              <Image
+                src="/images/hero-anime.jpg"
+                alt="RV 바이브코딩 2026"
+                width={600}
+                height={400}
+                className="rounded-2xl object-cover w-full shadow-2xl shadow-neon-lime/10"
+                priority
+              />
+              {/* Gradient overlay for seamless left edge blend */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
+              {/* Bottom gradient */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              {/* Neon glow border effect */}
+              <div className="absolute -inset-px rounded-2xl border border-neon-lime/10 pointer-events-none" />
+            </div>
+          </div>
         </div>
       </div>
 
