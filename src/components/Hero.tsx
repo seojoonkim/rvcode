@@ -61,13 +61,13 @@ export default function Hero() {
         >
           <a
             href="#preparation"
-            className="px-8 py-4 rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-neon-lime/20"
+            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-neon-lime/20"
           >
             사전 준비 시작하기 →
           </a>
           <a
             href="#what-is"
-            className="px-8 py-4 rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 transition-colors"
+            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 transition-colors"
           >
             더 알아보기
           </a>
