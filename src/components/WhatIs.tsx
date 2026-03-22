@@ -24,6 +24,13 @@ const resources = [
     url: "https://medium.com/hashed-kr/hashed-vibe-labs%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-285e52fa2735",
     tag: "신규",
   },
+  {
+    title: "[심화편] 기억하는 존재를 만드는 법",
+    description:
+      "AI 에이전트는 매 세션마다 기억을 잃습니다. 파일 기반 기억 구조, TIER별 컨텍스트 주입, 벡터 검색까지 — 실제 에이전트 운영에서 탄생한 커스텀 메모리 아키텍처의 설계와 구현을 상세히 다룹니다.",
+    url: "https://seojoonkim.medium.com/memory-d6f559f1fe73",
+    tag: "심화",
+  },
 ];
 
 export default function WhatIs() {
