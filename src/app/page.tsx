@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import Timeline from "@/components/Timeline";
 import Preparation from "@/components/Preparation";
 import FAQ from "@/components/FAQ";
+import Ending from "@/components/Ending";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Timeline />
       <Preparation />
       <FAQ />
+      <Ending />
       <Footer />
     </main>
   );
