@@ -6,7 +6,7 @@ export default function Footer() {
           진행자:{" "}
           <span className="text-white font-medium">Simon Kim (서준)</span>
         </p>
-        <p className="text-xs text-gray-600">
+        <p className="text-sm text-gray-600">
           Powered by Claude Code + GitHub + Vercel
         </p>
       </div>

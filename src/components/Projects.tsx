@@ -66,7 +66,7 @@ export default function Projects() {
               <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
               <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-400 font-medium">
+                <span className="text-sm text-gray-400 font-medium">
                   {project.difficultyLabel}
                 </span>
                 <DifficultyDots level={project.difficulty} />

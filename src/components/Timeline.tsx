@@ -88,10 +88,10 @@ export default function Timeline() {
                 {/* Content */}
                 <div className="flex-1 pb-8">
                   <div className="flex items-center gap-3 mb-1">
-                    <span className="text-xs font-mono text-neon-lime font-bold">
+                    <span className="text-sm font-mono text-neon-lime font-bold">
                       {step.time}
                     </span>
-                    <span className="text-xs text-gray-400 bg-[#0a0a0a] px-2 py-0.5 rounded-full border border-[#1a1a1a]">
+                    <span className="text-sm text-gray-400 bg-[#0a0a0a] px-2 py-0.5 rounded-full border border-[#1a1a1a]">
                       {step.duration}
                     </span>
                   </div>

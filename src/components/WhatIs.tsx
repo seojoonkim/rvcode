@@ -58,14 +58,14 @@ export default function WhatIs() {
           <div
             className="relative p-6 rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] animate-fade-in delay-100"
           >
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold tracking-wider">
+            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-bold tracking-wider">
               BEFORE
             </div>
             <div className="mb-4">
               <XCircle className="w-10 h-10 text-red-400" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-bold mb-3 text-red-400">기존 방식</h3>
-            <p className="text-xs text-gray-500 mb-4">개발자 없이 뭔가 만들고 싶을 때</p>
+            <p className="text-sm text-gray-500 mb-4">개발자 없이 뭔가 만들고 싶을 때</p>
             <div className="space-y-3 text-gray-400 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✕</span>
@@ -98,7 +98,7 @@ export default function WhatIs() {
           <div
             className="relative p-6 rounded-xl border border-neon-lime/20 bg-neon-lime/5 animate-fade-in delay-200"
           >
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-neon-lime/10 text-neon-lime text-xs font-bold tracking-wider">
+            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-neon-lime/10 text-neon-lime text-sm font-bold tracking-wider">
               AFTER
             </div>
             <div className="mb-4">
@@ -107,7 +107,7 @@ export default function WhatIs() {
             <h3 className="text-xl font-bold mb-3 text-neon-lime">
               바이브코딩
             </h3>
-            <p className="text-xs text-gray-500 mb-4">지금 바로 시작하면</p>
+            <p className="text-sm text-gray-500 mb-4">지금 바로 시작하면</p>
             <div className="space-y-3 text-gray-400 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-neon-lime font-bold mt-0.5">✓</span>
@@ -167,11 +167,11 @@ export default function WhatIs() {
                       <h4 className="font-bold text-sm sm:text-base text-white group-hover:text-neon-lime transition-colors">
                         {resource.title}
                       </h4>
-                      <span className="flex-shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
+                      <span className="flex-shrink-0 text-xs font-bold px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
                         {resource.tag}
                       </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    <p className="text-sm text-gray-400 leading-relaxed">
                       {resource.description}
                     </p>
                   </div>

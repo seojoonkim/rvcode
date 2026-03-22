@@ -120,7 +120,7 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-2 right-2 px-3 py-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md bg-gray-700/50 hover:bg-gray-700 text-xs text-gray-400 hover:text-white transition-colors gap-1"
+      className="absolute top-2 right-2 px-3 py-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md bg-gray-700/50 hover:bg-gray-700 text-sm text-gray-400 hover:text-white transition-colors gap-1"
     >
       {copied ? (
         <>
@@ -166,7 +166,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
 
           {/* Install command */}
           <div>
-            <p className="text-xs text-gray-400 mb-2 flex items-center gap-1.5">
+            <p className="text-sm text-gray-400 mb-2 flex items-center gap-1.5">
               <Package className="w-3.5 h-3.5" strokeWidth={1.5} />
               설치 명령어 — 터미널을 열고 아래를 복사해서 붙여넣으세요
             </p>
@@ -180,7 +180,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
 
           {/* Verify command */}
           <div>
-            <p className="text-xs text-gray-400 mb-2 flex items-center gap-1.5">
+            <p className="text-sm text-gray-400 mb-2 flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-neon-green" strokeWidth={1.5} />
               확인 명령어 — 설치가 잘 됐는지 확인하려면 아래를 입력하세요
             </p>
@@ -190,7 +190,7 @@ function AccordionItem({ step }: { step: InstallStep }) {
               </pre>
               <CopyButton text={step.verifyCmd} />
             </div>
-            <p className="text-xs text-gray-400 mt-1.5">
+            <p className="text-sm text-gray-400 mt-1.5">
               예상 결과: <code className="text-neon-lime">{step.verifyExpect}</code>
             </p>
           </div>

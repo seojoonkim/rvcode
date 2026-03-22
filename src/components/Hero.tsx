@@ -15,22 +15,22 @@ export default function Hero() {
 
       {/* Floating decorative code snippets */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        <div className="absolute top-[15%] left-[8%] text-gray-800/40 font-mono text-xs sm:text-sm animate-float-slow hidden md:block">
+        <div className="absolute top-[15%] left-[8%] text-gray-800/40 font-mono text-sm animate-float-slow hidden md:block">
           <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
             <span className="text-neon-lime/30">const</span> <span className="text-blue-400/30">tool</span> = <span className="text-orange-400/30">ai</span>.<span className="text-purple-400/30">create</span>()
           </div>
         </div>
-        <div className="absolute top-[20%] right-[10%] text-gray-800/40 font-mono text-xs sm:text-sm animate-float-delayed hidden md:block">
+        <div className="absolute top-[20%] right-[10%] text-gray-800/40 font-mono text-sm animate-float-delayed hidden md:block">
           <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
             <span className="text-green-400/30">✓</span> <span className="text-gray-600/40">deployed in 2min</span>
           </div>
         </div>
-        <div className="absolute bottom-[25%] left-[12%] text-gray-800/40 font-mono text-xs animate-float-slow2 hidden lg:block">
+        <div className="absolute bottom-[25%] left-[12%] text-gray-800/40 font-mono text-sm animate-float-slow2 hidden lg:block">
           <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
             <span className="text-neon-lime/30">&gt;</span> <span className="text-gray-600/40">vibe coding magic_</span>
           </div>
         </div>
-        <div className="absolute bottom-[30%] right-[8%] text-gray-800/40 font-mono text-xs animate-float-delayed2 hidden lg:block">
+        <div className="absolute bottom-[30%] right-[8%] text-gray-800/40 font-mono text-sm animate-float-delayed2 hidden lg:block">
           <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
             <span className="text-yellow-400/30">⚡</span> <span className="text-gray-600/40">no code needed</span>
           </div>
@@ -102,7 +102,7 @@ export default function Hero() {
             <span>서울</span>
           </div>
           <div className="w-px h-4 bg-gray-700" />
-          <span className="text-xs font-medium text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
+          <span className="text-sm font-medium text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
             신청 마감 임박
           </span>
         </div>
