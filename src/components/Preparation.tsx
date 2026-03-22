@@ -239,8 +239,27 @@ export default function Preparation() {
           </p>
         </div>
 
-        {/* Terminal Guide — 터미널이 뭔가요? */}
+        {/* Supplies */}
         <div className="mb-12 animate-fade-in delay-100">
+          <div className="flex items-center gap-2 mb-4">
+            <Package className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
+            <h3 className="text-xl font-display text-white">준비물</h3>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {supplies.map((item) => (
+              <div
+                key={item.text}
+                className="flex items-center gap-3 p-4 min-h-[48px] rounded-xl border border-[#1a1a1a] bg-[#0a0a0a]"
+              >
+                {item.icon}
+                <span className="text-sm sm:text-base text-gray-300">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Terminal Guide — 설치 가이드 바로 앞 */}
+        <div className="mb-12 animate-fade-in delay-200">
           <div className="p-6 rounded-xl border border-neon-lime/20 bg-neon-lime/5">
             <div className="flex items-center gap-2 mb-4">
               <Terminal className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
@@ -307,25 +326,6 @@ export default function Preparation() {
                 <span className="text-neon-lime font-mono text-xs">clear</span> 화면 깨끗이
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Supplies */}
-        <div className="mb-12 animate-fade-in delay-200">
-          <div className="flex items-center gap-2 mb-4">
-            <Package className="w-5 h-5 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl font-display text-white">준비물</h3>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {supplies.map((item) => (
-              <div
-                key={item.text}
-                className="flex items-center gap-3 p-4 min-h-[48px] rounded-xl border border-[#1a1a1a] bg-[#0a0a0a]"
-              >
-                {item.icon}
-                <span className="text-sm sm:text-base text-gray-300">{item.text}</span>
-              </div>
-            ))}
           </div>
         </div>
 
