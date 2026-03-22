@@ -109,6 +109,11 @@ body::before {
 .animate-fade-in {
   opacity: 0;
   animation: fade-in 0.5s ease-out forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: opacity, transform;
 }
 
 /* Stagger delays */
@@ -116,6 +121,14 @@ body::before {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
+
+/* === GPU acceleration for smooth rendering (iOS Safari flicker fix) === */
+section, .highlight-block, .highlight-block-blue, .highlight-block-pink {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
 
 /* === Focus visible for accessibility === */
 :focus-visible {

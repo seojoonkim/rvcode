@@ -6,32 +6,37 @@ const resources = [
   {
     title: "Andrej Karpathy — \"Vibe Coding\" 원조 트윗 (2025)",
     description:
-      "\"나는 코드를 '보기만' 한다. LLM이 다 알아서 짜주고, 나는 '대충 괜찮은지'만 본다\" — 바이브코딩이라는 용어를 최초로 만든 Andrej Karpathy의 트윗. AI에게 코딩을 완전히 맡기는 새로운 패러다임을 선언했습니다.",
+      "\"코드를 '보기만' 한다. AI가 다 알아서 짜주고, 나는 대충 괜찮은지만 본다\" — 바이브코딩이라는 말을 세상에 처음 알린 AI 연구자의 트윗입니다.",
     url: "https://x.com/karpathy/status/1886192185538785606",
+    tag: "원조",
   },
   {
-    title: "Ethan Mollick — \"The AI-Augmented Workforce\" (Wharton)",
+    title: "a16z — \"AI와 소프트웨어 개발의 미래\"",
     description:
-      "AI와 인간의 협업 패턴을 '켄타우로스(역할 분담)'와 '사이보그(완전 융합)'로 분류한 연구. 바이브코딩은 사이보그 접근법의 대표 사례로, 인간과 AI의 경계가 사라지는 미래를 보여줍니다.",
-    url: "https://www.oneusefulthing.org/p/centaur-and-cyborg-writing",
+      "실리콘밸리 최고의 투자사 a16z가 분석한 AI 코딩 도구의 현재와 미래. 바이브코딩이 개발자의 역할을 어떻게 바꾸고 있는지 살펴봅니다.",
+    url: "https://a16z.com/podcast/whos-coding-now-ai-and-the-future-of-software-development/",
+    tag: "인사이트",
   },
   {
-    title: "McKinsey — \"The economic potential of generative AI\" (2023)",
+    title: "IBM Korea — 바이브 코딩이란? (한국어)",
     description:
-      "생성형 AI가 연간 2.6~4.4조 달러 경제적 가치를 창출할 것으로 전망. 소프트웨어 개발 부문에서 가장 큰 생산성 향상이 예상되며, 바이브코딩이 그 핵심 동력입니다.",
-    url: "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "바이브코딩의 개념, 작동 방식, 장단점을 한국어로 쉽게 정리한 글입니다. 처음 접하는 분에게 추천합니다.",
+    url: "https://www.ibm.com/kr-ko/think/topics/vibe-coding",
+    tag: "한국어",
   },
   {
-    title: "Paul Graham — \"Write Like You Talk\"",
+    title: "삼성SDS — 바이브 코딩 이해와 활용 (한국어)",
     description:
-      "\"글쓰기처럼 말하듯이 코딩하라\" — 프로그래밍이 자연어로 진화한다는 철학적 관점. 복잡한 문법 대신 일상 언어로 소프트웨어를 만드는 바이브코딩의 근본 철학과 맞닿아 있습니다.",
-    url: "https://paulgraham.com/writes.html",
+      "삼성SDS가 정리한 바이브코딩 활용 가이드. 실제 업무에서 AI 코딩을 어떻게 쓸 수 있는지 실용적인 관점으로 설명합니다.",
+    url: "https://www.samsungsds.com/kr/insights/understanding-and-applying-vibe-coding.html",
+    tag: "한국어",
   },
   {
-    title: "Chris Dixon — \"Read Write Own\" (웹3와 AI의 교차점)",
+    title: "위키백과 — 바이브 코딩 (한국어)",
     description:
-      "소프트웨어 제작의 민주화가 인터넷의 다음 단계. AI가 코딩의 진입장벽을 무너뜨리는 것이 Read-Write-Own 철학의 연장선이며, 누구나 만들고 소유하는 시대를 여는 핵심입니다.",
-    url: "https://cdixon.org/",
+      "바이브코딩의 역사, 도구, 장단점을 객관적으로 정리한 백과사전 문서. 전체적인 맥락을 빠르게 파악할 수 있습니다.",
+    url: "https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%EB%B8%8C_%EC%BD%94%EB%94%A9",
+    tag: "개요",
   },
 ];
 
@@ -44,7 +49,7 @@ export default function WhatIs() {
             <span className="highlight-block">바이브코딩</span>이란?
           </h2>
           <p className="text-lg text-gray-400">
-            자연어(일상 대화)로 말하면 AI가 코드를 만들어줍니다
+            코딩을 몰라도 괜찮아요. 말로 설명하면 AI가 대신 만들어줍니다
           </p>
         </div>
 
@@ -125,9 +130,14 @@ export default function WhatIs() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <h4 className="font-bold text-sm sm:text-base text-white group-hover:text-neon-lime transition-colors mb-1">
-                      {resource.title}
-                    </h4>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="font-bold text-sm sm:text-base text-white group-hover:text-neon-lime transition-colors">
+                        {resource.title}
+                      </h4>
+                      <span className="flex-shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
+                        {resource.tag}
+                      </span>
+                    </div>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                       {resource.description}
                     </p>
