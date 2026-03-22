@@ -227,7 +227,7 @@ export default function Preparation() {
     <section id="preparation" className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 tracking-tight flex items-center justify-center gap-3">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display mb-4 tracking-tight flex items-center justify-center gap-3">
             <Star className="w-8 h-8 md:w-10 md:h-10 text-neon-lime" strokeWidth={1.5} />
             <span className="highlight-block">사전 준비</span>
           </h2>

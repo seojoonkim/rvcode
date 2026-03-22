@@ -73,7 +73,7 @@ export default function FAQ() {
         <div className="text-center mb-16 animate-fade-in">
           <div className="flex items-center justify-center gap-3 mb-4">
             <HelpCircle className="w-8 h-8 md:w-10 md:h-10 text-neon-lime" strokeWidth={1.5} />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display tracking-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display tracking-tight">
               자주 묻는 질문
             </h2>
           </div>
