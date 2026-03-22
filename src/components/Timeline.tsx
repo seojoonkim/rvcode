@@ -49,7 +49,7 @@ const steps = [
 
 export default function Timeline() {
   return (
-    <section className="py-24 px-4">
+    <section className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,17 +58,17 @@ export default function Timeline() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            2시간 타임라인
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            <span className="highlight-block">2시간</span> 타임라인
           </h2>
-          <p className="text-lg text-muted">
+          <p className="text-lg text-gray-400">
             빠르고 실전적인 핸즈온 세션
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent" />
+          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon-lime via-neon-blue to-transparent" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -81,22 +81,22 @@ export default function Timeline() {
                 className="relative flex gap-4 sm:gap-6"
               >
                 {/* Dot */}
-                <div className="relative z-10 flex-shrink-0 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-card border border-card-border flex items-center justify-center text-xl sm:text-2xl">
+                <div className="relative z-10 flex-shrink-0 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-xl sm:text-2xl">
                   {step.icon}
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 pb-8">
                   <div className="flex items-center gap-3 mb-1">
-                    <span className="text-xs font-mono text-primary">
+                    <span className="text-xs font-mono text-neon-lime font-bold">
                       {step.time}
                     </span>
-                    <span className="text-xs text-muted bg-card-border/50 px-2 py-0.5 rounded-full">
+                    <span className="text-xs text-gray-400 bg-gray-800 px-2 py-0.5 rounded-full border border-gray-700">
                       {step.duration}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold mb-1">{step.title}</h3>
-                  <p className="text-sm text-muted">{step.description}</p>
+                  <h3 className="text-lg font-bold mb-1 text-white">{step.title}</h3>
+                  <p className="text-sm text-gray-400">{step.description}</p>
                 </div>
               </motion.div>
             ))}

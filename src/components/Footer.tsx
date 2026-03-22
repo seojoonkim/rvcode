@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-4 border-t border-card-border">
+    <footer className="py-12 px-4 border-t border-gray-800">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -12,10 +12,11 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-sm text-muted mb-2">
-            진행자: <span className="text-foreground font-medium">Simon Kim (서준)</span>
+          <p className="text-sm text-gray-400 mb-2">
+            진행자:{" "}
+            <span className="text-white font-medium">Simon Kim (서준)</span>
           </p>
-          <p className="text-xs text-muted/60">
+          <p className="text-xs text-gray-600">
             Powered by Claude Code + GitHub + Vercel
           </p>
         </motion.div>

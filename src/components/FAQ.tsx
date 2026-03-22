@@ -42,14 +42,14 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-card-border rounded-xl overflow-hidden">
+    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-800/20">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-card/50 transition-colors text-left"
+        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-gray-800/50 transition-colors text-left"
       >
-        <span className="font-medium text-sm sm:text-base pr-4">{q}</span>
+        <span className="font-medium text-sm sm:text-base pr-4 text-white">{q}</span>
         <span
-          className={`text-muted flex-shrink-0 transition-transform duration-200 ${
+          className={`text-gray-400 flex-shrink-0 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         >
@@ -67,7 +67,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             className="overflow-hidden"
           >
             <div className="px-4 sm:px-5 pb-5">
-              <p className="text-sm text-muted leading-relaxed">{a}</p>
+              <p className="text-sm text-gray-400 leading-relaxed">{a}</p>
             </div>
           </motion.div>
         )}
@@ -78,7 +78,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <section className="py-24 px-4">
+    <section className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,10 +87,10 @@ export default function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
             자주 묻는 질문
           </h2>
-          <p className="text-lg text-muted">궁금한 점을 확인해보세요</p>
+          <p className="text-lg text-gray-400">궁금한 점을 확인해보세요</p>
         </motion.div>
 
         <motion.div

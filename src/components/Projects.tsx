@@ -33,7 +33,7 @@ function DifficultyDots({ level }: { level: number }) {
         <div
           key={i}
           className={`w-2 h-2 rounded-full ${
-            i <= level ? "bg-accent" : "bg-card-border"
+            i <= level ? "bg-neon-lime" : "bg-gray-700"
           }`}
         />
       ))}
@@ -43,7 +43,7 @@ function DifficultyDots({ level }: { level: number }) {
 
 export default function Projects() {
   return (
-    <section className="py-24 px-4 bg-card/30">
+    <section className="py-32 md:py-40 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,11 +52,12 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
             오늘 만드는 것
           </h2>
-          <p className="text-lg text-muted">
-            2시간 안에 실제로 작동하는 3가지 도구를 만듭니다
+          <p className="text-lg text-gray-400">
+            2시간 안에 실제로 작동하는{" "}
+            <span className="highlight-block">3가지 도구</span>를 만듭니다
           </p>
         </motion.div>
 
@@ -68,13 +69,13 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group p-6 rounded-2xl border border-card-border bg-card hover:border-primary/30 transition-all duration-300"
+              className="group p-6 rounded-2xl border border-gray-700 bg-gray-800/30 hover:border-neon-lime/40 hover:bg-gray-800/50 transition-all duration-300"
             >
               <div className="text-4xl mb-4">{project.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-muted text-sm mb-4">{project.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+              <p className="text-gray-400 text-sm mb-4">{project.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-muted">
+                <span className="text-xs text-gray-400 font-medium">
                   {project.difficultyLabel}
                 </span>
                 <DifficultyDots level={project.difficulty} />

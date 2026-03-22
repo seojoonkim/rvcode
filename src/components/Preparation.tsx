@@ -94,7 +94,7 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-2 right-2 px-2 py-1 rounded-md bg-card-border/50 hover:bg-card-border text-xs text-muted hover:text-foreground transition-colors"
+      className="absolute top-2 right-2 px-2 py-1 rounded-md bg-gray-700/50 hover:bg-gray-700 text-xs text-gray-400 hover:text-white transition-colors"
     >
       {copied ? "✓ 복사됨" : "복사"}
     </button>
@@ -105,17 +105,17 @@ function AccordionItem({ step }: { step: InstallStep }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-card-border rounded-xl overflow-hidden">
+    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-800/20">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-card/50 transition-colors text-left"
+        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-gray-800/50 transition-colors text-left"
       >
         <div>
-          <h4 className="font-bold text-base">{step.title}</h4>
-          <p className="text-sm text-muted">{step.description}</p>
+          <h4 className="font-bold text-base text-white">{step.title}</h4>
+          <p className="text-sm text-gray-400">{step.description}</p>
         </div>
         <span
-          className={`text-muted transition-transform duration-200 ${
+          className={`text-gray-400 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         >
@@ -135,9 +135,9 @@ function AccordionItem({ step }: { step: InstallStep }) {
             <div className="px-4 sm:px-5 pb-5 space-y-4">
               {/* Install command */}
               <div>
-                <p className="text-xs text-muted mb-2">📦 설치 명령어</p>
+                <p className="text-xs text-gray-400 mb-2">📦 설치 명령어</p>
                 <div className="relative">
-                  <pre className="bg-[#0d0d25] border border-card-border rounded-lg p-3 sm:p-4 text-sm font-mono text-green-300 overflow-x-auto">
+                  <pre className="bg-black border border-gray-700 rounded-lg p-3 sm:p-4 text-sm font-mono text-neon-lime overflow-x-auto">
                     {step.installCmd}
                   </pre>
                   <CopyButton text={step.installCmd} />
@@ -146,15 +146,15 @@ function AccordionItem({ step }: { step: InstallStep }) {
 
               {/* Verify command */}
               <div>
-                <p className="text-xs text-muted mb-2">✅ 확인 명령어</p>
+                <p className="text-xs text-gray-400 mb-2">✅ 확인 명령어</p>
                 <div className="relative">
-                  <pre className="bg-[#0d0d25] border border-card-border rounded-lg p-3 sm:p-4 text-sm font-mono text-blue-300 overflow-x-auto">
+                  <pre className="bg-black border border-gray-700 rounded-lg p-3 sm:p-4 text-sm font-mono text-neon-blue overflow-x-auto">
                     {step.verifyCmd}
                   </pre>
                   <CopyButton text={step.verifyCmd} />
                 </div>
-                <p className="text-xs text-muted mt-1">
-                  예상 결과: <code className="text-accent">{step.verifyExpect}</code>
+                <p className="text-xs text-gray-400 mt-1">
+                  예상 결과: <code className="text-neon-lime">{step.verifyExpect}</code>
                 </p>
               </div>
             </div>
@@ -169,16 +169,16 @@ function ChecklistItem({ label }: { label: string }) {
   const [checked, setChecked] = useState(false);
 
   return (
-    <label className="flex items-center gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors cursor-pointer select-none">
+    <label className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors cursor-pointer select-none">
       <input
         type="checkbox"
         checked={checked}
         onChange={() => setChecked(!checked)}
-        className="w-5 h-5 rounded border-card-border accent-primary"
+        className="w-5 h-5 rounded border-gray-700 accent-neon-lime"
       />
       <span
         className={`text-sm transition-colors ${
-          checked ? "text-muted line-through" : "text-foreground"
+          checked ? "text-gray-600 line-through" : "text-white"
         }`}
       >
         {label}
@@ -189,7 +189,7 @@ function ChecklistItem({ label }: { label: string }) {
 
 export default function Preparation() {
   return (
-    <section id="preparation" className="py-24 px-4 bg-card/30">
+    <section id="preparation" className="py-32 md:py-40 px-4">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -198,10 +198,10 @@ export default function Preparation() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            ⭐ 사전 준비
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            ⭐ <span className="highlight-block">사전 준비</span>
           </h2>
-          <p className="text-lg text-muted">
+          <p className="text-lg text-gray-400">
             세션 전에 미리 준비해주세요 (약 20분 소요)
           </p>
         </motion.div>
@@ -214,15 +214,15 @@ export default function Preparation() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h3 className="text-xl font-bold mb-4">📦 준비물</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">📦 준비물</h3>
           <div className="grid sm:grid-cols-2 gap-3">
             {supplies.map((item) => (
               <div
                 key={item.text}
-                className="flex items-center gap-3 p-3 rounded-xl border border-card-border bg-card"
+                className="flex items-center gap-3 p-3 rounded-xl border border-gray-700 bg-gray-800/30"
               >
                 <span className="text-xl">{item.icon}</span>
-                <span className="text-sm">{item.text}</span>
+                <span className="text-sm text-gray-300">{item.text}</span>
               </div>
             ))}
           </div>
@@ -236,7 +236,7 @@ export default function Preparation() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-12"
         >
-          <h3 className="text-xl font-bold mb-4">🛠 설치 가이드</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">🛠 설치 가이드</h3>
           <div className="space-y-3">
             {installSteps.map((step) => (
               <AccordionItem key={step.id} step={step} />
@@ -251,8 +251,8 @@ export default function Preparation() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h3 className="text-xl font-bold mb-4">✅ 최종 체크리스트</h3>
-          <div className="border border-card-border rounded-xl bg-card p-4">
+          <h3 className="text-xl font-bold mb-4 text-white">✅ 최종 체크리스트</h3>
+          <div className="border border-gray-700 rounded-xl bg-gray-800/30 p-4">
             <div className="space-y-1">
               {checklist.map((item) => (
                 <ChecklistItem key={item} label={item} />
