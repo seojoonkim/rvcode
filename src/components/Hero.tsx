@@ -112,18 +112,17 @@ export default function Hero() {
             </div>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-400"
+              className="flex flex-row gap-3 w-full max-w-sm mx-auto sm:max-w-none sm:w-auto sm:justify-center lg:justify-start animate-fade-in delay-400"
             >
               <a
                 href="#preparation"
-                className="group px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-neon-lime/20"
+                className="flex-1 sm:flex-none group px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-neon-lime/20 text-center"
               >
-                지금 바로 신청하기
-                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                준비물 보기
               </a>
               <a
                 href="#what-is"
-                className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 hover:border-gray-600 transition-all"
+                className="flex-1 sm:flex-none px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 hover:border-gray-600 transition-all text-center"
               >
                 바이브코딩이란?
               </a>
