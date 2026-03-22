@@ -157,7 +157,7 @@ export default function WhatIs() {
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <h4 className="font-bold text-sm sm:text-base text-white group-hover:text-neon-lime transition-colors">
+                      <h4 className="font-bold text-base sm:text-lg text-white group-hover:text-neon-lime transition-colors">
                         {resource.title}
                       </h4>
                       <span className="flex-shrink-0 text-xs font-emphasis px-2 py-0.5 rounded-full bg-neon-lime/10 text-neon-lime border border-neon-lime/20">
