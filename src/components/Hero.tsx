@@ -52,8 +52,8 @@ export default function Hero() {
             <h1
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display mb-6 leading-tight tracking-tight animate-fade-in delay-100"
             >
-              RV{" "}
-              <span className="highlight-block">바이브코딩</span>
+              Red Velvet{" "}
+              <span className="highlight-block">Code 2026</span>
             </h1>
 
             {/* Enhanced subtitle */}
