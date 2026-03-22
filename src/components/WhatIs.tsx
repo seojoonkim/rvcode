@@ -11,18 +11,18 @@ const resources = [
     tag: "원조",
   },
   {
-    title: "a16z — \"AI와 소프트웨어 개발의 미래\"",
+    title: "Hashed — 역삼각형 인재의 시대: 바이브 코딩이 창업과 투자의 문법을 바꾸다",
     description:
-      "실리콘밸리 최고의 투자사 a16z가 분석한 AI 코딩 도구의 현재와 미래. 바이브코딩이 개발자의 역할을 어떻게 바꾸고 있는지 살펴봅니다.",
-    url: "https://a16z.com/podcast/whos-coding-now-ai-and-the-future-of-software-development/",
-    tag: "인사이트",
+      "Hashed 대표 김서준이 직접 바이브코딩으로 만든 프로젝트 사례와 함께, 스타트업 창업·투자의 문법이 어떻게 바뀌고 있는지 분석합니다.",
+    url: "https://medium.com/hashed-kr/vibe-founders-64f178fe5497",
+    tag: "필독",
   },
   {
-    title: "IBM Korea — 바이브 코딩이란? (한국어)",
+    title: "Hashed — AI 에이전트와 함께 20명이 1000명처럼 일하는 조직 만들기",
     description:
-      "바이브코딩의 개념, 작동 방식, 장단점을 한국어로 쉽게 정리한 글입니다. 처음 접하는 분에게 추천합니다.",
-    url: "https://www.ibm.com/kr-ko/think/topics/vibe-coding",
-    tag: "한국어",
+      "AI 에이전트를 '모더레이터'로 활용해 조직의 판단 밀도를 높이는 실험. CEO 병목 해소부터 실제 운영 사례까지 담았습니다.",
+    url: "https://medium.com/hashed-kr/agentic-vc-a518ca24edba",
+    tag: "필독",
   },
   {
     title: "삼성SDS — 바이브 코딩 이해와 활용 (한국어)",
@@ -32,11 +32,11 @@ const resources = [
     tag: "한국어",
   },
   {
-    title: "위키백과 — 바이브 코딩 (한국어)",
+    title: "IBM Korea — 바이브 코딩이란? (한국어)",
     description:
-      "바이브코딩의 역사, 도구, 장단점을 객관적으로 정리한 백과사전 문서. 전체적인 맥락을 빠르게 파악할 수 있습니다.",
-    url: "https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%EB%B8%8C_%EC%BD%94%EB%94%A9",
-    tag: "개요",
+      "바이브코딩의 개념, 작동 방식, 장단점을 한국어로 쉽게 정리한 글입니다. 처음 접하는 분에게 추천합니다.",
+    url: "https://www.ibm.com/kr-ko/think/topics/vibe-coding",
+    tag: "한국어",
   },
 ];
 
