@@ -4,39 +4,25 @@ import { XCircle, Rocket, BookOpen, ExternalLink } from "lucide-react";
 
 const resources = [
   {
-    title: "Andrej Karpathy — \"Vibe Coding\" 원조 트윗 (2025)",
-    description:
-      "\"코드를 '보기만' 한다. AI가 다 알아서 짜주고, 나는 대충 괜찮은지만 본다\" — 바이브코딩이라는 말을 세상에 처음 알린 AI 연구자의 트윗입니다.",
-    url: "https://x.com/karpathy/status/1886192185538785606",
-    tag: "원조",
-  },
-  {
     title: "Hashed — 역삼각형 인재의 시대: 바이브 코딩이 창업과 투자의 문법을 바꾸다",
     description:
-      "Hashed 대표 김서준이 직접 바이브코딩으로 만든 프로젝트 사례와 함께, 스타트업 창업·투자의 문법이 어떻게 바뀌고 있는지 분석합니다.",
+      "바이브코딩으로 직접 만든 ETHval, Only In Abu Dhabi 등 프로젝트 사례와 함께, 역삼각형 인재상과 스타트업 창업·투자의 문법이 어떻게 바뀌고 있는지 분석합니다.",
     url: "https://medium.com/hashed-kr/vibe-founders-64f178fe5497",
     tag: "필독",
   },
   {
     title: "Hashed — AI 에이전트와 함께 20명이 1000명처럼 일하는 조직 만들기",
     description:
-      "AI 에이전트를 '모더레이터'로 활용해 조직의 판단 밀도를 높이는 실험. CEO 병목 해소부터 실제 운영 사례까지 담았습니다.",
+      "AI 에이전트를 '모더레이터'로 활용해 조직의 판단 밀도를 높이는 실험. CEO 병목 해소, 판단과 실행의 분리, 실제 운영 사례까지 담았습니다.",
     url: "https://medium.com/hashed-kr/agentic-vc-a518ca24edba",
     tag: "필독",
   },
   {
-    title: "삼성SDS — 바이브 코딩 이해와 활용 (한국어)",
+    title: "Hashed — Hashed Vibe Labs의 시작: 1st Batch 2026 Seoul Edition",
     description:
-      "삼성SDS가 정리한 바이브코딩 활용 가이드. 실제 업무에서 AI 코딩을 어떻게 쓸 수 있는지 실용적인 관점으로 설명합니다.",
-    url: "https://www.samsungsds.com/kr/insights/understanding-and-applying-vibe-coding.html",
-    tag: "한국어",
-  },
-  {
-    title: "IBM Korea — 바이브 코딩이란? (한국어)",
-    description:
-      "바이브코딩의 개념, 작동 방식, 장단점을 한국어로 쉽게 정리한 글입니다. 처음 접하는 분에게 추천합니다.",
-    url: "https://www.ibm.com/kr-ko/think/topics/vibe-coding",
-    tag: "한국어",
+      "바이브코딩 시대, '실행의 중개자'를 걷어내는 르네상스가 시작됩니다. Hashed Vibe Labs 런칭과 함께 새로운 유형의 창업자를 찾는 프로그램을 소개합니다.",
+    url: "https://medium.com/hashed-kr/hashed-vibe-labs%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-285e52fa2735",
+    tag: "신규",
   },
 ];
 
