@@ -12,17 +12,17 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <SectionDivider variant="lime" />
+      <SectionDivider />
       <WhatIs />
-      <SectionDivider variant="blue" />
+      <SectionDivider />
       <Projects />
-      <SectionDivider variant="red" />
+      <SectionDivider />
       <Timeline />
-      <SectionDivider variant="mixed" />
+      <SectionDivider />
       <Preparation />
-      <SectionDivider variant="blue" />
+      <SectionDivider />
       <FAQ />
-      <SectionDivider variant="lime" />
+      <SectionDivider />
       <Ending />
       <Footer />
     </main>
