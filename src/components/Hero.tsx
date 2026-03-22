@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
       {/* Pure black background with enhanced glow */}
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-[#0a0a0f]" />
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-neon-lime/5 rounded-full blur-[200px]" />
         <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-neon-blue/5 rounded-full blur-[150px]" />

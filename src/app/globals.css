@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #000000;
+  --color-background: #0a0a0f;
   --color-foreground: #ffffff;
   --color-neon-lime: #CCFF00;
   --color-neon-pink: #FF2D78;
@@ -33,7 +33,7 @@
 
 /* === BASE === */
 body {
-  background: #000000;
+  background: #0a0a0f;
   color: #ffffff;
   font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -81,12 +81,12 @@ body::before {
 
 .highlight-block {
   background: #CCFF00;
-  color: #000000;
+  color: #0a0a0f;
 }
 
 .highlight-block-blue {
   background: #3b82f6;
-  color: #000000;
+  color: #0a0a0f;
 }
 
 .highlight-block-pink {
@@ -192,7 +192,7 @@ a:focus-visible {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0a0a0f;
 }
 ::-webkit-scrollbar-thumb {
   background: #1a1a1a;
