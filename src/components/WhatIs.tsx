@@ -141,7 +141,7 @@ export default function WhatIs() {
         <div className="max-w-4xl mx-auto animate-fade-in delay-300">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-neon-lime" strokeWidth={1.5} />
-            <h3 className="text-xl sm:text-2xl font-display text-white">
+            <h3 className="text-3xl sm:text-4xl font-display text-white">
               더 깊이 이해하기
             </h3>
           </div>
