@@ -29,9 +29,24 @@ export const metadata: Metadata = {
   description:
     "텍스트 → 마법: AI로 나만의 도구 만들기. RV 바이브코딩 세션에서 코딩 없이 나만의 웹앱을 만들어보세요.",
   openGraph: {
-    title: "RV 바이브코딩",
-    description: "텍스트 → 마법: AI로 나만의 도구 만들기",
+    title: "Red Velvet Code 2026",
+    description: "코딩 몰라도 OK. 오늘 2시간 안에 나만의 AI 도구를 직접 만들어봅니다.",
     type: "website",
+    url: "https://rvcode.vercel.app",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Red Velvet Code 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Red Velvet Code 2026",
+    description: "코딩 몰라도 OK. 오늘 2시간 안에 나만의 AI 도구를 직접 만들어봅니다.",
+    images: ["/og-image.jpg"],
   },
 };
 
