@@ -1,20 +1,45 @@
 "use client";
 
-import { Calendar } from "lucide-react";
+import { Calendar, MapPin, Zap, Users, Wrench, Laptop } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-      {/* Pure black background with subtle glow */}
+      {/* Pure black background with enhanced glow */}
       <div className="absolute inset-0 bg-black" />
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-neon-lime/5 rounded-full blur-[200px]" />
         <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-neon-blue/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-purple-500/3 rounded-full blur-[180px]" />
+      </div>
+
+      {/* Floating decorative code snippets */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        <div className="absolute top-[15%] left-[8%] text-gray-800/40 font-mono text-xs sm:text-sm animate-float-slow hidden md:block">
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
+            <span className="text-neon-lime/30">const</span> <span className="text-blue-400/30">tool</span> = <span className="text-orange-400/30">ai</span>.<span className="text-purple-400/30">create</span>()
+          </div>
+        </div>
+        <div className="absolute top-[20%] right-[10%] text-gray-800/40 font-mono text-xs sm:text-sm animate-float-delayed hidden md:block">
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
+            <span className="text-green-400/30">✓</span> <span className="text-gray-600/40">deployed in 2min</span>
+          </div>
+        </div>
+        <div className="absolute bottom-[25%] left-[12%] text-gray-800/40 font-mono text-xs animate-float-slow2 hidden lg:block">
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
+            <span className="text-neon-lime/30">&gt;</span> <span className="text-gray-600/40">vibe coding magic_</span>
+          </div>
+        </div>
+        <div className="absolute bottom-[30%] right-[8%] text-gray-800/40 font-mono text-xs animate-float-delayed2 hidden lg:block">
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg border border-gray-800/30 px-3 py-2">
+            <span className="text-yellow-400/30">⚡</span> <span className="text-gray-600/40">no code needed</span>
+          </div>
+        </div>
       </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 bg-gray-800/50 backdrop-blur-sm mb-8 text-sm text-gray-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon-lime/30 bg-neon-lime/5 backdrop-blur-sm mb-8 text-sm text-neon-lime/80">
             <span className="w-2 h-2 rounded-full bg-neon-lime animate-pulse" />
             참가자 모집 중
           </div>
@@ -27,34 +52,76 @@ export default function Hero() {
           <span className="highlight-block">바이브코딩</span>
         </h1>
 
+        {/* Enhanced subtitle */}
         <p
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4 leading-relaxed animate-fade-in delay-200"
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-2 leading-relaxed animate-fade-in delay-200"
         >
-          텍스트 → 마법:{" "}
-          <span className="text-white font-medium">AI로 나만의 도구 만들기</span>
+          코딩 몰라도 OK.
+        </p>
+        <p
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in delay-200"
+        >
+          오늘 <span className="text-white font-semibold">2시간 안에</span> 나만의 AI 도구를{" "}
+          <span className="text-neon-lime font-semibold">직접 만들어봅니다</span>.
         </p>
 
-        <p
-          className="text-base text-gray-600 mb-12 flex items-center justify-center gap-2 animate-fade-in delay-300"
+        {/* Social proof stats */}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8 animate-fade-in delay-300">
+          <div className="flex items-center gap-1.5 text-sm text-gray-400">
+            <Zap className="w-4 h-4 text-yellow-400" />
+            <span>2시간 세션</span>
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-gray-700" />
+          <div className="flex items-center gap-1.5 text-sm text-gray-400">
+            <Users className="w-4 h-4 text-blue-400" />
+            <span>소수 정예</span>
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-gray-700" />
+          <div className="flex items-center gap-1.5 text-sm text-gray-400">
+            <Wrench className="w-4 h-4 text-neon-lime" />
+            <span>실제 결과물</span>
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-gray-700" />
+          <div className="flex items-center gap-1.5 text-sm text-gray-400">
+            <Laptop className="w-4 h-4 text-purple-400" />
+            <span>노트북 1대면 충분</span>
+          </div>
+        </div>
+
+        {/* Date & location */}
+        <div
+          className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-gray-700/50 bg-gray-800/30 backdrop-blur-sm mb-10 animate-fade-in delay-300"
         >
-          <Calendar className="w-4 h-4 text-gray-600" />
-          일시: TBD (추후 확정)
-        </p>
+          <div className="flex items-center gap-1.5 text-sm text-gray-300">
+            <Calendar className="w-4 h-4 text-gray-400" />
+            <span>2026년 봄</span>
+          </div>
+          <div className="w-px h-4 bg-gray-700" />
+          <div className="flex items-center gap-1.5 text-sm text-gray-300">
+            <MapPin className="w-4 h-4 text-gray-400" />
+            <span>서울</span>
+          </div>
+          <div className="w-px h-4 bg-gray-700" />
+          <span className="text-xs font-medium text-neon-lime/80 bg-neon-lime/10 px-2 py-0.5 rounded-full">
+            신청 마감 임박
+          </span>
+        </div>
 
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-400"
         >
           <a
             href="#preparation"
-            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-neon-lime/20"
+            className="group px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl bg-neon-lime text-black font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-neon-lime/20"
           >
-            사전 준비 시작하기 →
+            지금 바로 신청하기
+            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a
             href="#what-is"
-            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 transition-colors"
+            className="px-8 py-4 min-h-[48px] flex items-center justify-center rounded-xl border border-gray-700 text-white font-medium text-lg hover:bg-gray-800/50 hover:border-gray-600 transition-all"
           >
-            더 알아보기
+            바이브코딩이란?
           </a>
         </div>
       </div>
@@ -65,6 +132,29 @@ export default function Hero() {
           <div className="w-1 h-2 rounded-full bg-gray-600" />
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(1deg); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(-1deg); }
+        }
+        @keyframes float-slow2 {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+        }
+        @keyframes float-delayed2 {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-18px); }
+        }
+        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 7s ease-in-out 1s infinite; }
+        .animate-float-slow2 { animation: float-slow2 8s ease-in-out 0.5s infinite; }
+        .animate-float-delayed2 { animation: float-delayed2 5s ease-in-out 2s infinite; }
+      `}</style>
     </section>
   );
 }
